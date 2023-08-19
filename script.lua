@@ -3,9 +3,6 @@ local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
 local userInputService = game:GetService("UserInputService")
 
-local dashPower = 100 -- You can change this value to the desired amount of studs to move forward
-local dashSpeed = 20 -- You can adjust this value to control how fast the character reaches the destination
-
 local isDashing = false
 
 local function dash()
