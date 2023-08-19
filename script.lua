@@ -1,3 +1,8 @@
+print("script executed!")
+print("dashspeed:")
+print(dashSpeed)
+print("dashpower:")
+print(dashPower)
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
