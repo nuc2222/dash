@@ -21,10 +21,6 @@ local function dash()
     
     isDashing = true
     
-    -- Teleport the character 2 studs up
-    local newPosition = character.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
-    character.HumanoidRootPart.CFrame = CFrame.new(newPosition)
-    
     local direction = character.HumanoidRootPart.CFrame.LookVector
     local startPosition = character.HumanoidRootPart.Position
     local endPosition = startPosition + direction * dashPower
@@ -35,6 +31,10 @@ local function dash()
     local startTime = tick()
     local currentTime = startTime
     local elapsedTime = 0
+    
+    -- Teleport the character 2 studs up
+    local newPosition = character.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
+    character.HumanoidRootPart.CFrame = CFrame.new(newPosition)
     
     while elapsedTime < timeToReach do
         local alpha = elapsedTime / timeToReach
