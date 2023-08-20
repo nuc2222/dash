@@ -46,6 +46,9 @@ local function dash()
     character.HumanoidRootPart.CFrame = CFrame.new(endPosition)
     
     isDashing = false
+    
+    -- Teleport the character 2 studs up
+    character:SetPrimaryPartCFrame(character:GetPrimaryPartCFrame() + Vector3.new(0, 2, 0))
 end
 
 local function onChat(message)
