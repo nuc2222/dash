@@ -1,6 +1,7 @@
 local dashPower = 40 -- Default value
 local dashSpeed = 100 -- You can adjust this value to control how fast the character reaches the destination
-
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
 print("script executed!")
 print("dashspeed:")
 print(dashSpeed)
@@ -31,10 +32,6 @@ local function dash()
     local startTime = tick()
     local currentTime = startTime
     local elapsedTime = 0
-    
-    -- Teleport the character 2 studs up
-    local newPosition = character.HumanoidRootPart.Position + Vector3.new(0, 2, 0)
-    character.HumanoidRootPart.CFrame = CFrame.new(newPosition)
     
     while elapsedTime < timeToReach do
         local alpha = elapsedTime / timeToReach
