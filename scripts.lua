@@ -1,1 +1,5 @@
+print('loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/dash/main/scripts.lua"))()')
 print('loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/dash/main/script.lua"))()')
+print('loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/dash/main/vanish_command.lua"))()')
+print('loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/dash/main/movment_power_edit.lua"))()')
+print('loadstring(game:HttpGet("https://raw.githubusercontent.com/nuc2222/dash/main/better_chat_commands.lua"))()')
