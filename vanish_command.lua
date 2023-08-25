@@ -1,21 +1,22 @@
-print("say /vanish in chat to disapear in the air warning this will clear your screan too another wanring dieing after executeing will unexecute it pls reexecute if you died")
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local humanoid = character:WaitForChild("Humanoid")
-local isVanished = false
+print("say /vanish in chat to disappear in the air. Warning: This will clear your screen too. Another warning: Dying after executing will unexecute it. Please re-execute if you died.")
 
-local function teleportToVanish()
+player = game.Players.LocalPlayer
+character = player.Character or player.CharacterAdded:Wait()
+humanoid = character:WaitForChild("Humanoid")
+isVanished = false
+
+function teleportToVanish()
     while isVanished do
-        character:SetPrimaryPartCFrame(CFrame.new(0, 100000000, 0))
-        wait(1)  -- Adjust the wait time if needed
+        character:SetPrimaryPartCFrame(CFrame.new(0, 10000, 0))
+        wait(1) -- Adjust the wait time if needed
     end
 end
 
 game:GetService("Players").LocalPlayer.Chatted:Connect(function(message)
     if message:lower() == "/vanish" then
-        isVanished = not isVanished
-        if isVanished then
-            teleportToVanish()
-        end
+        isVanished = true
+        teleportToVanish()
+    elseif message:lower() == "/unvanish" then
+        isVanished = false
     end
 end)
