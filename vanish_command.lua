@@ -8,7 +8,7 @@ isVanished = false
 function teleportToVanish()
     while isVanished do
         character:SetPrimaryPartCFrame(CFrame.new(0, 10000, 0))
-        wait(1) -- Adjust the wait time if needed
+        wait() -- Adjust the wait time if needed
     end
 end
 
@@ -18,5 +18,6 @@ game:GetService("Players").LocalPlayer.Chatted:Connect(function(message)
         teleportToVanish()
     elseif message:lower() == "/unvanish" then
         isVanished = false
+        character:SetPrimaryPartCFrame(CFrame.new(0, 10000, 0))
     end
 end)
